@@ -4,9 +4,9 @@
  if (age<16){
      console.log(`Привет ${neme}! Вы подросток!`)
  } else if (age>16 && age<40){
-    console.log(`Привіт ${neme}! Вы молодой человек!`)
+    console.log(`Привeт ${neme}! Вы молодой человек!`)
 } else if (age>40){
-    console.log(`Привіт ${neme}! Вы старичок!`)
+    console.log(`Привeт ${neme}! Вы старичок!`)
 }
 
 
