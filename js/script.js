@@ -7,6 +7,8 @@
     console.log(`Привeт ${neme}! Вы молодой человек!`)
 } else if (age>40){
     console.log(`Привeт ${neme}! Вы старичок!`)
+} else if (age==0){
+   alert(`Ошибка`)
 }
 
 
