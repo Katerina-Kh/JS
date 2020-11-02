@@ -1,7 +1,7 @@
  let neme = prompt ("Как вас зовут?");
  let age = prompt ("Сколько вам лет?");
 
- if (age==0){
+ if (age<=0){
     alert(`Ошибка`)
  } else if (age<16){
      console.log(`Привет ${neme}! Вы подросток!`)
