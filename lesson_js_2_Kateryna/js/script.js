@@ -1,40 +1,48 @@
 
-let fruitsEng = ["Plum", "Peach", "Pineapple", "Cherry", "Pear", "Apple"];
+// let fruitsEng = ["Plum", "Peach", "Pineapple", "Cherry", "Pear", "Apple"];
 
-for (let i = 0; i < fruitsEng.length; i++) {
-  console.log(fruitsEng [i]);  
-}
+// for (let i = 0; i < fruitsEng.length; i++) {
+//   console.log(fruitsEng [i]);  
+// }
 
-let btnEng = document.querySelector(".button-eng");
+// let btnEng = document.querySelector(".button-eng");
 
-alert.log(btnEng)
+// alert.log(btnEng)
 
-btnEng.addEventListener("click", fruitsEng)
+// btnEng.addEventListener("click", fruitsEng)
 
 
 
-let fruitsRus = ["Слива", "Персик", "Ананас", "Вишня", "Груша", "Яблоко"];
-for (let i = 0; i < fruitsRus.length; i++) {
-    console.log(fruitsRus[i]); 
-}
+// let fruitsRus = ["Слива", "Персик", "Ананас", "Вишня", "Груша", "Яблоко"];
+// for (let i = 0; i < fruitsRus.length; i++) {
+//     console.log(fruitsRus[i]); 
+// }
 
-let btnRus = document.querySelector(".button-rus");
+// let btnRus = document.querySelector(".button-rus");
 
-alert.log(btnRus)
+// .log(btnRus)
 
-btnRus.addEventListener("click", fruitsRus)
+// btnRus.addEventListener("click", fruitsRus)
 
 
 
 
 
 // Многомерний масив
-// let arr = {
+let arr = {
 
-//     "fruits_eng":["Plum", "Peach", "Pineapple", "Cherry", "Pear", "Apple"],
+    "fruitsEng":["Plum", "Peach", "Pineapple", "Cherry", "Pear", "Apple"],
     
-//     "fruits_rus": ["Слива", "Персик", "Ананас", "Вишня", "Груша", "Яблоко"],
-// }
+    "fruitsRus": ["Слива", "Персик", "Ананас", "Вишня", "Груша", "Яблоко"],
+}
+let btnEng = document.querySelector(".button-eng");
+
+console.log(btnEng);
+
+btnEng.addEventListener("click", function (){
+    alert(arr(fruitsEng))
+});
+
 
 
 
