@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   // !Переменные
-  let randomColor = document.querySelector(".random--color");
-  let randomProperties = document.querySelector(".random--properties");
   let box = document.querySelector(".box");
   let topleft = document.querySelector(".input-tl");
   let topright = document.querySelector(".input-tr");
@@ -11,27 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // ! Событие
 
-  // ? Смена цвета
-
-  document.addEventListener("keyup", function (evt) {
-    if (evt.code == "Space") {
-      red = Math.floor(Math.random() * 250 + 0);
-      green = Math.floor(Math.random() * 250 + 0);
-      blue = Math.floor(Math.random() * 250 + 0);
-
-      rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
-      document.body.style.backgroundColor = rgbColor;
-    }
-  })
-  randomColor.addEventListener("click", function () {
-        red = Math.floor(Math.random() * 250 + 0);
-        green = Math.floor(Math.random() * 250 + 0);
-        blue = Math.floor(Math.random() * 250 + 0);
-  
-        rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
-        document.body.style.backgroundColor = rgbColor;
-  });
-
   // ? Смена свойства
 
   topleft.addEventListener("input", function (){
@@ -39,5 +16,18 @@ document.addEventListener("DOMContentLoaded", function () {
    console.log(topleft.value + "px")
   });
 
+  topright.addEventListener("input", function (){
+    box.style.bordeTopRightRadius = topright.value + "px";
+    console.log(topright.value + "px")
+   });
 
+   bottomleft.addEventListener("input", function (){
+    box.style.bordeBottomLeftRadius = bottomleft.value + "px";
+    console.log(bottomleft.value + "px")
+   });
+   bottomright.addEventListener("input", function (){
+    box.style.bordeBottomRightRadius = bottomright.value + "px";
+    console.log(bottomright.value + "px")
+   });
+   
 });
