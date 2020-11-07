@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let topleft = document.querySelector(".input-tl");
   let topright = document.querySelector(".input-tr");
   let bottomleft = document.querySelector(".input-bl");
-  let bottomleft = document.querySelector(".input-br");
+  let bottomright = document.querySelector(".input-br");
 
   // ! Событие
 
@@ -22,19 +22,21 @@ document.addEventListener("DOMContentLoaded", function () {
       rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
       document.body.style.backgroundColor = rgbColor;
     }
-
-    randomColor.addEventListener("click", function () {
-      red = Math.floor(Math.random() * 250 + 0);
-      green = Math.floor(Math.random() * 250 + 0);
-      blue = Math.floor(Math.random() * 250 + 0);
-
-      rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
-      document.body.style.backgroundColor = rgbColor;
-    })
+  })
+  randomColor.addEventListener("click", function () {
+        red = Math.floor(Math.random() * 250 + 0);
+        green = Math.floor(Math.random() * 250 + 0);
+        blue = Math.floor(Math.random() * 250 + 0);
+  
+        rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+        document.body.style.backgroundColor = rgbColor;
   });
+
   // ? Смена свойства
-  topleft.addEventListener("drag", function (evt){
-    document.getElementsByClassName("box").style.backgroundColor = "red";
+
+  topleft.addEventListener("input", function (){
+   box.style.bordeTopLeftRadius = topleft.value + "px";
+   console.log(topleft.value + "px")
   });
 
 
