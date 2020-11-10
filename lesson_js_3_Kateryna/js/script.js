@@ -12,21 +12,21 @@ document.addEventListener("DOMContentLoaded", function () {
   // ? Смена свойства
 
   topleft.addEventListener("input", function (){
-   box.style.bordeTopLeftRadius = topleft.value + "px";
+   box.style.borderTopLeftRadius = topleft.value + "px";
    console.log(topleft.value + "px")
   });
 
   topright.addEventListener("input", function (){
-    box.style.bordeTopRightRadius = topright.value + "px";
+    box.style.borderTopRightRadius = topright.value + "px";
     console.log(topright.value + "px")
    });
 
    bottomleft.addEventListener("input", function (){
-    box.style.bordeBottomLeftRadius = bottomleft.value + "px";
+    box.style.borderBottomLeftRadius = bottomleft.value + "px";
     console.log(bottomleft.value + "px")
    });
    bottomright.addEventListener("input", function (){
-    box.style.bordeBottomRightRadius = bottomright.value + "px";
+    box.style.borderBottomRightRadius = bottomright.value + "px";
     console.log(bottomright.value + "px")
    });
    

@@ -32,8 +32,8 @@ body {
 }
 
 .box{
-    width: 250px;
-    height: 100px;
+    width: 450px;
+    height: 200px;
     border: black 3px solid;
     background: rgb(255, 255, 255);
     margin: 20px;
@@ -46,7 +46,6 @@ body {
 .wrap{
     display: flex;
     justify-content: center;
-    padding: 20px;
 }
 
 .properties{
@@ -54,7 +53,6 @@ body {
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
-    background-color: rgb(218, 218, 218);
     width: 700px;
     height: 250px;
 }

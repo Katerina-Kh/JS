@@ -1,0 +1,30 @@
+body{
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+    font-family: 'Philosopher', sans-serif;
+}
+.title{
+color:  rgb(105, 3, 105);
+font-weight: 700;
+}
+
+.form-wrrap{
+     width: 550px;
+    height: 400px; 
+    background-color: rgb(211, 198, 212);   
+    padding: 20px;
+    border: 3px solid rgb(105, 3, 105);
+    border-radius: 10px;
+}
+.form{
+    margin: 50px 0;
+}
+
+.columns{
+    margin: 0 7px;
+}
+.accent-color{
+    background-color: rgb(105, 3, 105);
+    font-weight: 700;
+}

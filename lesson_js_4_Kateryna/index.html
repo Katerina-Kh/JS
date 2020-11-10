@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 4.Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1 class="title">Залиште заявку онлайн</h1>
+    <div class="form-wrrap">
+        <form action="#" method="POST" class="form">
+            <div class="row">
+                <div class="six columns">
+                    <label>Ім'я та приізвище</label>
+                    <input class="u-full-width" type="text" name="user-name" placeholder="Іван Іванов" required data-validate-field="name">
+                    <label>Тлефон</label>
+                    <input class="phoneInput" type="tel" name="user-phone" placeholder="+38(066) 000 00 00" required data-validate-field="phone">
+                </div>
+                <div class="six columns">
+                    <label for="exampleEmailInput">Your email</label>
+                    <input class="u-full-width" type="email" name="user-emeil" placeholder="test@mailbox.com" id="exampleEmailInput"
+                        data-validate-field="email">
+                </div>
+                <div class="row">
+                    <div class="six columns">
+                        <label>Дата та час</label>
+                        <input class="u-full-width" type="text" name="data-time" placeholder="01.10.2020 на 11:30">
+                    </div>
+                    <div class="six columns">
+                        <label for="exampleRecipientInput">Що Вас цікавить?</label>
+                        <select class="u-full-width" name="list" id="exampleRecipientInput">
+                            <option value="Option 1">Перукарські послуги</option>
+                            <option value="Option 2">Візаж</option>
+                            <option value="Option 3">Нігтьовий сервіс</option>
+                            <option value="Option 4">Косметологія</option>
+                        </select>
+                    </div>
+                </div>
+                <label for="exampleMessage">Ваше повідомлення</label>
+                <textarea class="u-full-width" placeholder="Hi Dave …" id="exampleMessage" name="user-message"></textarea>
+                <input class="button-primary accent-color" type="submit" value="Відправити">
+            </div>
+        </form>
+    </div>
+    <script src="js/inputmask.min.js"></script>
+    <script src="js/just-validate.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
