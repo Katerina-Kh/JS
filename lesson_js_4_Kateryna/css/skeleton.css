@@ -169,7 +169,9 @@ a:hover {
 button,
 input[type="submit"],
 input[type="reset"],
-input[type="button"] {
+input[type="button"],
+input[type="date"],
+input[type="time"] {
   display: inline-block;
   height: 38px;
   padding: 0 30px;
@@ -232,6 +234,8 @@ input[type="text"],
 input[type="tel"],
 input[type="url"],
 input[type="password"],
+input[type="date"],
+input[type="time"],
 textarea,
 select {
   height: 38px;

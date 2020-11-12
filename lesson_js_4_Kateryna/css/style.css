@@ -9,16 +9,16 @@ color:  rgb(105, 3, 105);
 font-weight: 700;
 }
 
-.form-wrrap{
+.form-wrap{
      width: 550px;
-    height: 500px; 
+    height: 450px; 
     background-color: rgb(211, 198, 212);   
     padding: 20px;
     border: 3px solid rgb(105, 3, 105);
     border-radius: 10px;
 }
 .form{
-    margin: 50px 0;
+    margin: 10px 5px;
 }
 
 .columns{
