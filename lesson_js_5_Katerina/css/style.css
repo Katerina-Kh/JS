@@ -1,0 +1,160 @@
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Philosopher', sans-serif;
+    margin: 0;
+}
+
+.wrapper-container {
+    margin: 0 40px;
+}
+
+.tab {
+    width: 90%;
+    margin-top: 50px;
+}
+
+.tab__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.tab__item {
+    font-style: 18px;
+    font-weight: 400;
+    font-size: 24px;
+    padding: 10px 20px;
+    width: 200px;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    margin-bottom: 0px;
+}
+
+.tab__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    z-index: -1;
+}
+
+.tab__item--active {
+    color: rgb(255, 254, 234);
+}
+
+.tab__item--active::before {
+    background-color: rebeccapurple;
+    animation: bgSlide 1s ease-in-out normal forwards;
+    box-shadow: 0px 10px 13px -7px #000000, 9px -9px 11px 10px rgba(39, 5, 63, 0.48);
+}
+
+.tab-content {
+    border: 3px solid rgb(85, 7, 85);
+    width: 100%;
+    min-height: 400px;
+    height: 100%;
+    box-shadow: 10px 14px 20px 7px #24033F;
+}
+
+/* ! Random color */
+.box_random {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.color-name {
+    font-size: 28px;
+    margin-top: 50px;
+}
+
+.tab--hidden {
+    display: none;
+}
+
+.tab__button {
+    width: 400px;
+    height: 50px;
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+/* ! Radius */
+
+.box_radius {
+    width: 450px;
+    height: 200px;
+    border: black 3px solid;
+    background: rgb(180, 82, 226);
+    margin: 20px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.properties {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.input {
+    margin: 10px 120px;
+}
+
+/*! Form */
+
+.title {
+    color: rgb(105, 3, 105);
+    font-weight: 700;
+}
+
+.form-wrap {
+    width: 550px;
+    height: 450px;
+    background-color: rgb(211, 198, 212);
+    padding: 20px;
+    border: 3px solid rgb(105, 3, 105);
+    border-radius: 10px;
+}
+
+.form {
+    margin: 10px 5px;
+}
+
+.columns {
+    margin: 0 7px;
+}
+
+.accent-color {
+    background-color: rgb(105, 3, 105);
+    font-weight: 700;
+}
+
+
+
+@keyframes bgSlide {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
