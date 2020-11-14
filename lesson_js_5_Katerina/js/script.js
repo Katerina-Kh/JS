@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // !  Смена цвета
   let randomColor = document.querySelector(".random--color");
-  let boxRandom = document.getElementsByClassName(".box_random")
+  let boxRandom = document.querySelector(".box_random")
   let nameColor = document.querySelector(".color-name")
 
   document.addEventListener("keyup", function (evt) {
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
       rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
       boxRandom.style.backgroundColor = rgbColor;
     };
-    
+
     nameColor.textContent = rgbColor
   });
   randomColor.addEventListener("click", function () {
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
 
  // ! Смена свойства
- let box = document.querySelector(".box");
+ let box = document.querySelector(".box_radius");
  let topleft = document.querySelector(".input-tl");
  let topright = document.querySelector(".input-tr");
  let bottomleft = document.querySelector(".input-bl");
@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
       submitHandler: function (form) {
           let xhr = new XMLHttpRequest();
 
-          xhr.open("POST","mail.php", true)
+          xhr.open("POST","php/mail.php", true)
 
           let formData = new FormData(form);
 

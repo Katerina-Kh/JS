@@ -77,6 +77,9 @@ body {
 .color-name {
     font-size: 28px;
     margin-top: 50px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .tab--hidden {
@@ -89,6 +92,7 @@ body {
     color: black;
     background-color: white;
     border: 2px solid black;
+    border-radius: 10px;
     font-size: 22px;
     font-weight: 800;
 }
@@ -127,7 +131,6 @@ body {
 
 .form__wrap {
     width: 550px;
-    height: 450px;
     background-color: rgb(211, 198, 212);
     padding: 20px;
     border: 3px solid rgb(105, 3, 105);
