@@ -43,7 +43,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
       rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
       boxRandom.style.backgroundColor = rgbColor;
-    }
+    };
+    
+    nameColor.textContent = rgbColor
   });
   randomColor.addEventListener("click", function () {
     red = Math.floor(Math.random() * 250 + 0);
@@ -52,6 +54,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
     boxRandom.style.backgroundColor = rgbColor;
+
+        nameColor.textContent = rgbColor
   });
   
 
@@ -63,30 +67,78 @@ document.addEventListener("DOMContentLoaded", function () {
  let bottomright = document.querySelector(".input-br");
 
  topleft.addEventListener("input", function (){
-  box.style.borderTopLeftRadius = topleft.value + "px";
-  console.log(topleft.value + "px")
+  box.style.borderTopLeftRadius = topleft.value + "%";
+  console.log(topleft.value + "%")
  });
 
  topright.addEventListener("input", function (){
-   box.style.borderTopRightRadius = topright.value + "px";
-   console.log(topright.value + "px")
+   box.style.borderTopRightRadius = topright.value + "%";
+   console.log(topright.value + "%")
   });
 
   bottomleft.addEventListener("input", function (){
-   box.style.borderBottomLeftRadius = bottomleft.value + "px";
-   console.log(bottomleft.value + "px")
+   box.style.borderBottomLeftRadius = bottomleft.value + "%";
+   console.log(bottomleft.value + "%")
   });
   bottomright.addEventListener("input", function (){
-   box.style.borderBottomRightRadius = bottomright.value + "px";
-   console.log(bottomright.value + "px")
+   box.style.borderBottomRightRadius = bottomright.value + "%";
+   console.log(bottomright.value + "%")
   });
   
+  // ! Форма
+  let phoneFielgs = document.querySelectorAll(".phoneInput")
+  var im = new Inputmask("+38(099) 999 99 99");
+  im.mask(phoneFielgs);
 
+  new JustValidate('.js-form', {
+      rules: {
+      name: {
+          required: true,
+          minLength: 5
+      },
+      email:{
+          required:true,
+          email: true
+      },
+      phone:{
+          required:true
+      }
+      },
+      messages: {
+          name: {
+              minLength: "Введіть ваше ім'я"
+          },
+          phone:{
+              required:"Вкажіть ваш номере телефону"
+          }
+      },
 
+      submitHandler: function (form) {
+          let xhr = new XMLHttpRequest();
 
+          xhr.open("POST","mail.php", true)
 
+          let formData = new FormData(form);
 
+          xhr.addEventListener("load", function(){
+              if(xhr.readyState === 4){
+                  switch (xhr.status){
+                      case 200:
+                          console.log ("Форма відправлена");
+                          form.reset();
+                          break;
+                      case 404:
+                          console.log ("Не вийшло");
+                          form.reset();
+                          break;
+                      default:
+                          console.log ("Помилка");
+                          break;
+                  }
+              }
+          })
+          xhr.send(formData)
 
-
-
+      },
+  });
 });
