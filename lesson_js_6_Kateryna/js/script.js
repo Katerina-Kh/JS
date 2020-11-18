@@ -18,18 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
     function newTask(taskText) {
         this.taskText = taskText;
         this.status = false;
+
     }
-
-    // ! Валідація текстового поля 
-    // new JustValidate ('taskText', {
-    //     rules: {
-    //         name: {
-    //             required: true,
-    //             maxLength: 30
-    //         }
-    //     }
-    // })
-
 
     let refreshLocalStorage = () => {
         localStorage.setItem("tasks", JSON.stringify(arrayTasks))
@@ -37,9 +27,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let addNewTask = () => {
         arrayTasks.push(new newTask(intField.value));
+        if (intField.value == false){
+            alert("Помилка. Поле не заповнено!")
+        } else {
         refreshLocalStorage();
         showTasksList();
         intField.value = null;
+        }
     }
 
     let createRow = (elem, index) => {

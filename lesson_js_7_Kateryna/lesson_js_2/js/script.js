@@ -7,12 +7,16 @@ $(document).ready(function () {
     let btnEng = $(".button-eng");
     let btnRu = $(".button-rus");
 
-    btnEng.on("click", function () {
-        console.log(arr["fruitsEng"]);        
+    btnEng.on("click", function () { 
+         $(arr["fruitsEng"]).each(function(index, value){
+        console.log(value)
+    })     
     });
 
-    btnRu.on("click", function () {
-        console.log(arr["fruitsRus"]);        
+    btnRu.on("click", function () { 
+        $(arr["fruitsRus"]).each(function(index, value){
+        console.log(value)    
     })
+    });
 
 });
