@@ -1,34 +1,42 @@
-document.addEventListener("DOMContentLoaded", function () {
-
-  // !Переменные
-  let box = document.querySelector(".box");
-  let topleft = document.querySelector(".input-tl");
-  let topright = document.querySelector(".input-tr");
-  let bottomleft = document.querySelector(".input-bl");
-  let bottomright = document.querySelector(".input-br");
-
-  // ! Событие
-
-  // ? Смена свойства
-
-  topleft.addEventListener("input", function (){
-   box.style.borderTopLeftRadius = topleft.value + "px";
-   console.log(topleft.value + "px")
+$(document).ready(function () {
+  
+  const box = $(".box");
+  let topleft = $(".input-tl");
+  let topright = $(".input-tr");
+  let bottomleft = $(".input-bl");
+  let bottomright = $(".input-br");
+  
+  
+  topleft.change( function (){
+    topleftVal = $(topleft).val()
+   console.log($(topleft).val())
+  box.css("borderTopLeftRadius", (topleftVal) + "%");
+ 
+  $(".vel-tl").text(topleftVal)
   });
 
-  topright.addEventListener("input", function (){
-    box.style.borderTopRightRadius = topright.value + "px";
-    console.log(topright.value + "px")
-   });
+  topright.change( function (){
+    topRighetVal = $(topright).val()
+   console.log($(topright).val())
+  box.css("borderTopRightRadius", (topRighetVal) + "%");
+ 
+  $(".vel-tr").text(topRighetVal)
+  });
 
-   bottomleft.addEventListener("input", function (){
-    box.style.borderBottomLeftRadius = bottomleft.value + "px";
-    console.log(bottomleft.value + "px")
-   });
-   bottomright.addEventListener("input", function (){
-    box.style.borderBottomRightRadius = bottomright.value + "px";
-    console.log(bottomright.value + "px")
-   });
-   
+  bottomleft.change( function (){
+    bottomleftVal = $(bottomleft).val()
+   console.log($(bottomleft).val())
+  box.css("borderBottomLeftRadius", (bottomleftVal) + "%");
+ 
+  $(".vel-bl").text(bottomleftVal)
+  });
+
+  bottomright.change( function (){
+    bottomRighetVal = $(bottomright).val()
+   console.log($(bottomright).val())
+  box.css("borderBottomRightRadius", (bottomRighetVal) + "%");
+ 
+  $(".vel-br").text(bottomRighetVal)
+  });
 });
 

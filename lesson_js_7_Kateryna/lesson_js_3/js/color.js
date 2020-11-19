@@ -10,7 +10,7 @@
       rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
       $("body").css("backgroundColor", (rgbColor));
 
-      $(nameBox).html(rgbColor)
+      $(nameBox).text(rgbColor)
   });
 
     $(document).on("keyup", function color(){
@@ -21,7 +21,7 @@
         rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
         $("body").css("backgroundColor", (rgbColor));
 
-        $(nameBox).html(rgbColor)
+        $(nameBox).text(rgbColor)
     });
 
 
