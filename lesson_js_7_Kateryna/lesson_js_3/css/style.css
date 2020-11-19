@@ -37,6 +37,10 @@ body {
     border: black 3px solid;
     background: rgb(255, 255, 255);
     margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     border-bottom-left-radius: 0px;
