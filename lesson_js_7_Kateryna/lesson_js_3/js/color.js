@@ -1,12 +1,4 @@
-// document.addEventListener("DOMContentLoaded", function () {
 
-//     // !Переменные
-//     let randomColor = document.querySelector(".random--color");
-  
-//     // ! Событие
-  
-//     // ? Смена цвета
-  
 //     document.addEventListener("keyup", function (evt) {
 //       if (evt.code == "Space") {
 //         red = Math.floor(Math.random() * 250 + 0);
@@ -30,16 +22,28 @@
 
   $(document).ready(function () {
 
-    let randomColor = $(".random--color")
+    const nameBox = $(".color-name")
 
-    function color() {
+    $(document).on("click", function color(){
+      red = Math.floor(Math.random() * 250 + 0);
+      green = Math.floor(Math.random() * 250 + 0);
+      blue = Math.floor(Math.random() * 250 + 0);
+     
+      rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+      $("body").css("backgroundColor", (rgbColor));
+
+      $(nameBox).html(rgbColor)
+  });
+
+    $(document).on("keyup", function color(){
         red = Math.floor(Math.random() * 250 + 0);
         green = Math.floor(Math.random() * 250 + 0);
         blue = Math.floor(Math.random() * 250 + 0);
-    }
+       
+        rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+        $("body").css("backgroundColor", (rgbColor));
 
-    $(document).on("keyup", function color(){
-
+        $(nameBox).html(rgbColor)
     });
 
 
