@@ -26,13 +26,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     let addNewTask = () => {
+        if (Boolean(intField.value.trim())){
         arrayTasks.push(new newTask(intField.value));
-        if (intField.value == false){
-            alert("Помилка. Поле не заповнено!")
-        } else {
         refreshLocalStorage();
         showTasksList();
         intField.value = null;
+    } else {
+        alert("Помилка. Поле не заповнено!")
+        intField.value = null;
+        return false;
         }
     }
 
