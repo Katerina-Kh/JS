@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1 class="title">Залиште заявку онлайн</h1>
+    <div class="form-wrap">
+        <form action="php/mail.php" method="POST" class="form">
+            <div class="row">
+                <div class="six columns">
+                    <label>Ім'я та приізвище</label>
+                    <input class="u-full-width" type="text" name="user_name" placeholder="Іван Іванов" data-validate-field="name" required>
+                    <div class="date-time">
+                        <div class="five columns">
+                            <label class="dt-title">Дата</label>
+                            <input class="u-full-width dt-input" type="date" name="date">
+                        </div>
+                        <div class="five columns">
+                            <label class="dt-title">Час</label>
+                            <input class="u-full-width dt-input" type="time" name="time" >
+                        </div>
+                    </div>
+                </div>
+                <div class="six columns">
+                    <label>Тлефон</label>
+                    <input class="phoneInput" type="tel" name="user_phone" placeholder="+38(066) 000 00 00" data-validate-field="phone" required>
+                    <label for="exampleEmailInput">Ваш email</label>
+                    <input class="u-full-width" type="email" name="user_emeil" placeholder="test@mailbox.com" id="exampleEmailInput" data-validate-field="email">
+                </div>
+                <div class="row">
+                    <div class="columns">
+                        <label for="exampleRecipientInput">Що Вас цікавить?</label>
+                        <select class="u-full-width" name="list" id="exampleRecipientInput">
+                            <option value="Перукарські послуги">Перукарські послуги</option>
+                            <option value="Візаж">Візаж</option>
+                            <option value="Нігтьовий сервіс">Нігтьовий сервіс</option>
+                            <option value="Косметологія">Косметологія</option>
+                            <option value="Комплексні процедури">Комплексні процедури</option>
+                        </select>
+                    </div>
+                </div>
+                <label for="exampleMessage">Ваше повідомлення</label>
+                <textarea class="u-full-width input__message" placeholder="Ваше повідомлення …" id="exampleMessage" name="user_message"></textarea>
+                <input class="button-primary accent-color" type="submit" value="Відправити">
+            </div>
+        </form>
+    </div>
+    <script src="js/inputmask.min.js"></script>
+    <script src="js/just-validate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
