@@ -13,7 +13,7 @@ $(document).ready(function () {
     function sendAjaxForm() {
         $.ajax({
             type: "POST",
-            url: "mail.php",
+            url: "../php/mail.php",
             data: "$data",
             dataType: "json",
             beforeSend(xhr) {
