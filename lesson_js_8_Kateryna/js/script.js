@@ -2,7 +2,7 @@ $(document).ready(function () {
     let phoneFielgs = $(".phoneInput")
     const btn = $(".button-primary")
 
-    $(btn).click(
+    btn.click(
         function () {
             sendAjaxForm();
             return false;
