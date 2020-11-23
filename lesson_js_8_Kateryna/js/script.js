@@ -20,7 +20,14 @@ $(document).ready(function () {
                 var im = new Inputmask("+38(099) 999 99 99");
                 im.mask(phoneFielgs);
 
-                new JustValidate('.js-form', {
+                ajax({
+                    url: 'https://just-validate-api.herokuapp.com/submit',
+                    method: 'POST',
+                    data: values,
+                    async: true,
+                    callback: function (response) {
+                        console.log(response)
+                    },
                     rules: {
                         name: {
                             required: true,
